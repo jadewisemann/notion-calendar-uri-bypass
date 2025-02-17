@@ -7,9 +7,11 @@
   <script>
     window.onload = () => {
       const uri = window.location.search.substring(1)
-      const decodedUri = decodeURIComponent(uri)
-      window.open(decodedUri, '_blank')
-      window.close()
+      console.log("url", window.location.search)
+      window.location.href = decodeURIComponent(uri);
+      window.setTimeout(() => {
+          window.close()
+      }, 100)
     }
 </script>
 </head>
