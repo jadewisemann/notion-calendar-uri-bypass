@@ -5,13 +5,13 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Document</title>
   <script>
-    const decode =  () => {}
-    
-    window.onload = function() {
+    window.onload = () => {
       const uri = window.location.search.substring(1)
-      window.location.href = decodeURIComponent(uri)
+      const decodedUri = decodeURIComponent(uri)
+      window.open(decodedUri, '_blank')
+      window.close()
     }
-  </script>
+</script>
 </head>
 <body>
   
